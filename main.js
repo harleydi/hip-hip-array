@@ -199,4 +199,7 @@ const students = [
   let arrayB = ['e', 'f', 'g', 'h']
 
   let combined = arrayA.concat(arrayB)
-  console.log(combined)
+  
+  for (let i = 0; i < combined.length; i++) {
+    console.log(combined[i])
+  }
