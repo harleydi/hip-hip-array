@@ -26,6 +26,9 @@ const students = [
   ];
   // Challenge 1 Code
 
+  for (let i = 0; i < students.length; i++) {
+    console.log(students[i])
+  }
 
 
   console.log("\n");
@@ -34,6 +37,10 @@ const students = [
   // Loop through the following array BACKWARDS, console.logging out each value. 64 should be printed first and 100 last.
   const grades = [100, 80, 110, 75, 83, 64];
   //Challenge 2 Code
+
+  for (let i = grades.length; i >= 0; i--) {
+    console.log(grades[i])
+  }
 
   
 
@@ -45,6 +52,12 @@ const students = [
   const positiveNumbers = [5, 2, 13, 17, 4, 102, 3000];
   // Challenge 3 Code
 
+  for (let i = 0; i < positiveNumbers.length; i++) {
+    if (positiveNumbers[i] % 2 === 0) {
+      console.log(positiveNumbers[i])
+    }
+  }
+
 
 
   console.log("\n");
@@ -55,6 +68,11 @@ const students = [
 
   // Challenge 4 Code
 
+  for (let i = 0; i < mixedSignNumbers.length; i++) {
+    if (mixedSignNumbers[i] % 2 === 0) {
+      console.log(mixedSignNumbers[i])
+    }
+  }
 
 
   
@@ -64,6 +82,10 @@ const students = [
   // Remove two values from the beginning and one value from the end of the following array, using pop and shift.  Then console.log out each value in the array individually.
   const symmetricalCapitals = ['A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y'];
   // Challenge 5 Code
+
+  for (let i = 2; i < symmetricalCapitals.length - 1; i++) {
+    console.log(symmetricalCapitals[i])
+  }
     
 
 
@@ -74,7 +96,10 @@ const students = [
   const fibonacciNumbers = [1, 1, 2, 3, 5, 8, 13];
   // Challenge 6 Code
   
-  
+  fibonacciNumbers.unshift(0)
+  fibonacciNumbers.push(21)
+  fibonacciNumbers.push(34)
+  console.log(fibonacciNumbers)
 
 
   console.log("\n");
@@ -83,7 +108,11 @@ const students = [
   // Make a NEW array with 5 values of your choice, using the same syntax as the array creation from the previous 6 challenges; that is, every value should be placed within the square brackets.  Now console.log out each value individually.
   // Challenge 7 Code
 
+  let boroughs = ['Bronx', 'Queens', 'Brooklyn', 'Manhattan', 'Staten Island Eww']
 
+  for (let i = 0; i < boroughs.length; i++) {
+    console.log(boroughs[i])
+  }
 
 
 
@@ -94,8 +123,15 @@ const students = [
   const emptyArray = [];
   // Challenge 8 Code
 
+  emptyArray.push('link')
+  emptyArray.push('link')
+  emptyArray.push('link')
+  emptyArray.unshift('Start-link')
+  emptyArray.push('End-link')
 
-
+  for (let i = 0; i < emptyArray.length; i++) {
+    console.log(emptyArray[i])
+  }
 
   console.log("\n");
   console.log("Challenge 9");
@@ -103,6 +139,9 @@ const students = [
   // Loop through the `students` array from Challenge 1, starting at index 3 and ending at index 10 (INCLUSIVE), logging out each value individually.
   // Challenge 9 Code
 
+  for (let i = 3; i <= 10; i++) {
+    console.log(students[i])
+  }
 
 
   console.log("\n");
@@ -111,7 +150,8 @@ const students = [
   // Make a COPY of the `students` array *using .slice*, starting at index 3 and ending at index 10 (INCLUSIVE), then log out each value of the copy individually. THEN log out each value of the original array. Notice that the original array didn't get any values taken out of it, because `slice` does NOT modify the original array.
   // Challenge 11 Code
   
-
+  let arr = students.slice(3, 10)
+  console.log(arr)
 
 
   console.log("\n");
@@ -121,7 +161,9 @@ const students = [
   const dinosaurs = ['Velociraptor', 'T-Rex', 'Stegosaurus', 'Triceratops', 'Dimetrodon', 'Allosaur', 'Spinosaurus', 'Gigantosaur']
   // Challenge 12 Code
 
-  
+  let dArr = dinosaurs.splice(4,3)
+  console.log(dinosaurs)
+  console.log(dArr)
   
   
   console.log("\n");
@@ -130,7 +172,8 @@ const students = [
   // Use .join to change the dinosaur strings from the above array into one string with a '*' string as the "separator". Then console.log out that string.
   // Challenge 13 Code
 
-
+  let str = dinosaurs.join('*')
+  console.log(str);
 
   
   console.log("\n");
@@ -140,7 +183,8 @@ const students = [
   // Use .reverse to reverse the dinosaur array and then log out the original array. .reverse DOES change the original array.
   // Challenge 14 Code
 
-
+  dinosaurs.reverse()
+  console.log(dinosaurs);
 
   
   console.log("\n");
@@ -151,4 +195,8 @@ const students = [
   // Challenge 15 Code
 
 
-  
+  let arrayA = ['a', 'b', 'c', 'd']
+  let arrayB = ['e', 'f', 'g', 'h']
+
+  let combined = arrayA.concat(arrayB)
+  console.log(combined)
